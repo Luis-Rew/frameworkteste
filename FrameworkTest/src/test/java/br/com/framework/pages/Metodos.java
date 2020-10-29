@@ -5,9 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Metodos {
-   WebDriver driver; 
-   
-   public void abrirNavegador(String site, String navegador) {
+	WebDriver driver;
+
+	public void abrirNavegador(String site, String navegador) {
 
 		if (navegador == "CHROME" || navegador == "FIREFOX") {
 			if (navegador == "CHROME") {
@@ -28,4 +28,13 @@ public class Metodos {
 		}
 		driver.manage().window().maximize();
 	}
+
+	/**
+	 * @author Luis Felipe
+	 * @param fechar navegador
+	 */
+	public void fecharNavegador() {
+		driver.quit();
+	}
+
 }
